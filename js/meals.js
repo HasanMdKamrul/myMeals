@@ -1,7 +1,7 @@
 // ** load meals data from api
 const loaderContainer = document.getElementById('sppiner');
 
-console.log(loaderContainer)
+// console.log(loaderContainer)
 
 const displayLoading = () => {
     loaderContainer.style.display = 'block';
@@ -104,8 +104,10 @@ dataLoad(false);
 
 const loadMealData = async (id)=>{
     try {
+        displayLoading();
         const response =await fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${id}`);
         const data = await response.json();
+        hideLoading()
         displayDetail(data)
     } catch (error) {
         console.log(error)
