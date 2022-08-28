@@ -19,61 +19,51 @@
       <section id="meals">
         <h1 class="text-center text-info">Meals...</h1>
       </section>
+      <!-- ** Search Functionality -->
       <section class="container">
-        <!-- ** Cards -->
-        <div class="row row-cols-1 row-cols-md-3 g-4" id="card-section">
-          <div class="col">
-            <div class="card">
-              <img src="..." class="card-img-top" alt="..." />
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">
-                  This is a longer card with supporting text below as a natural
-                  lead-in to additional content. This content is a little bit
-                  longer.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card">
-              <img src="..." class="card-img-top" alt="..." />
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">
-                  This is a longer card with supporting text below as a natural
-                  lead-in to additional content. This content is a little bit
-                  longer.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card">
-              <img src="..." class="card-img-top" alt="..." />
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">
-                  This is a longer card with supporting text below as a natural
-                  lead-in to additional content.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card">
-              <img src="..." class="card-img-top" alt="..." />
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">
-                  This is a longer card with supporting text below as a natural
-                  lead-in to additional content. This content is a little bit
-                  longer.
-                </p>
-              </div>
-            </div>
+        <div class="input-group mb-3">
+          <input
+            id="search-input"
+            type="text"
+            class="form-control bg-dark text-light"
+            placeholder="Search your meals..."
+            aria-label="Recipient's username"
+            aria-describedby="button-addon2"
+          />
+          <button
+            class="btn btn-outline-danger"
+            type="button"
+            id="button-addon2"
+          >
+            Search
+          </button>
+        </div>
+      </section>
+      <!-- ** Detail Meal -->
+      <section
+        class="container d-flex justify-content-center align-items-center"
+        style="height: 300px"
+        id="detail-card"
+      >
+        <div class="card" style="width: 25rem">
+          <img src="..." class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">
+              Some quick example text to build on the card title and make up the
+              bulk of the card's content.
+            </p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
           </div>
         </div>
+      </section>
+      <section class="container">
+        <!-- ** Cards -->
+        <div
+          class="row row-cols-1 row-cols-md-3 g-4"
+          id="card-section"
+          style="height: 18rem"
+        ></div>
       </section>
     </main>
     <script
