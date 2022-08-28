@@ -102,5 +102,27 @@ const displayDetail = (data)=>{
     // ** Where to display
     console.log(data)
     const displayContainer = document.getElementById('detail-card');
+   
+    const {meals} = data;
+
+    meals.forEach(meal => {
+        const {strMeal,strArea,strCategory,strInstructions,strMealThumb,idMeal} = meal;
+
+        displayContainer.innerHTML = `
+        <div class="card shadow-lg rounded-xl" >
+        <img style="height:300px; width=50px" src="${strMealThumb}" class="card-img-top rounded-xl p-1 img-fluid" alt="..." />
+            <div class="card-body bg-dark ">
+            <h5 class="card-title text-info">Name: ${strMeal}</h5>
+            <h5 class="card-title text-success">Origin: ${strArea}</h5>
+            <h5 class="card-title text-primary">Catagory: ${strCategory}</h5>
+            <p class="card-text text-muted">
+                ${strInstructions.slice(0,100)}
+            </p>
+            </div>
+        </div>
+        
+        
+        `
+    })
 
 }
