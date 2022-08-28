@@ -1,16 +1,33 @@
 // ** load meals data from api
+const loaderContainer = document.getElementById('sppiner');
+
+console.log(loaderContainer)
+
+const displayLoading = () => {
+    loaderContainer.style.display = 'block';
+    document.getElementById('card-section').classList.add("visually-hidden");
+};
+
+const hideLoading = () => {
+    loaderContainer.style.display = 'none';
+    document.getElementById('card-section').classList.remove('visually-hidden');
+};
 
 const dataLoad = async (search)=>{
     try {
         if (search) {
+            displayLoading();
             const response = await fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${search}`)
-            response.ok ? "Successful" : "Unsuccessfull"
+            response.ok ? "Successful" : "Unsuccessfull";
             const data = await response.json()
+            hideLoading()
             displayMeals(data)
         } else {
+            displayLoading();
             const response = await fetch(`https://www.themealdb.com/api/json/v1/1/search.php?f=t`)
             response.ok ? "Successful" : "Unsuccessfull"
             const data = await response.json()
+            hideLoading()
             displayMeals(data)
         }
         
